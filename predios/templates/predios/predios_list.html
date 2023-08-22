@@ -1,0 +1,17 @@
+{% extends 'predios/base.html' %}
+
+{% block title %}Lista de Predios{% endblock %}
+
+{% block content %}
+<h1>Predios</h1>
+<ul>
+    {% for predio in predios %}
+    <li>
+        {{ predio.nombre_direccion }}
+        <a href="{% url 'predio_edit' predio.id %}">Editar</a>
+        <a href="{% url 'predio_delete' predio.id %}">Eliminar</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'predio_create' %}">Crear nuevo predio</a>
+{% endblock %}

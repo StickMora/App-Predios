@@ -1,0 +1,14 @@
+{% extends 'predios/base.html' %}
+
+{% block title %}{% if predio_form.instance.id %}Editar{% else %}Crear{% endif %} Predio{% endblock %}
+
+{% block content %}
+<h1>{% if predio_form.instance.id %}Editar{% else %}Crear{% endif %} Predio</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ predio_form.as_p }}
+    <h2>Propietario</h2>
+    {{ propietario_form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}
