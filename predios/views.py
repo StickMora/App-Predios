@@ -25,6 +25,7 @@ def predio_create_edit(request, predio_id=None):
         propietario_form = PropietarioForm()  # Crea una instancia vacía del formulario de propietario
     return render(request, 'predios/predio_create_edit.html', {'predio_form': predio_form, 'propietario_form': propietario_form})
 
+
 def predio_delete(request, predio_id):
     predio = get_object_or_404(Predio, pk=predio_id)
     if request.method == 'POST':
