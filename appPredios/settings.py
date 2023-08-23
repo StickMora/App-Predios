@@ -81,8 +81,8 @@ WSGI_APPLICATION = 'appPredios.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'aplicacionPredios',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'appPredios',
         'USER': 'postgres',
         'PASSWORD': 'jhojan2299',
         'HOST': 'localhost',
